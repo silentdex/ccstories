@@ -1,0 +1,140 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #ccc;
+}
+
+main {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background: url("https://images.unsplash.com/photo-1474016230632-71d1a0185fd1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=471a5660ae798bd4900e2a6adb3017a3") center center;
+  background-size: cover;
+  height: 740px;
+  text-align: center;
+}
+
+header h1,
+header a {
+  position: relative;
+  top: 300px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header h1 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px 30px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.supporting {
+  background-color: #fff;
+  height: 400px;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.secondary {
+  background: url("https://images.unsplash.com/photo-1474022650697-7624c32312fa?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=0cd86b55c4ed94702ccfd0b52942a895");
+  background-size: cover;
+  height: 400px;
+}
+
+.discover {
+  background-color: #fff;
+  text-align: center;
+  height: 400px;
+  padding: 120px 0;
+}
+
+.discover a {
+  background-color: #fff;
+  color: #000;
+  margin: 10px;
+}
+
+footer {
+  padding: 20px;
+  background-color: #ccc;
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 500ms;
+  -webkit-transform: scale(1);
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+  height: 100%;
+  overflow: scroll;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  bottom: 0px;
+  left: 0px;
+  width: 120px;
+  padding: 30px;
+  background: #333;
+  z-index: 0;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar li {
+  color: rgba(225,225,225,0.8);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-bottom: 16px;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  color: rgba(225,225,225,1);
+}
+
+.toggle {
+  background: url("https://s3.amazonaws.com/codecademy-content/projects/z2d/stories/menu-white.svg") center center;
+  background-size: cover;
+  position: fixed;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 20px;
+  z-index: 2;
+  display: block;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: 500ms;
+}
+
+#sidebartoggler {
+  display: none;
+}
+
+#sidebartoggler:checked + .page-wrap {
+  
+  .toggle {
+    left: 150px;
+  }
+  
+  .page-content {
+    -webkit-transform:scale(0.7);
+    box-shadow: -4px 4px 20px rgba(0,0,0,0.2);
+  }
+}
